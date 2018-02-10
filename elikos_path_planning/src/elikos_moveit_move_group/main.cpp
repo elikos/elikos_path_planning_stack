@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
             traj_cmd.cmdCode = dm_cmd.cmdCode;
             traj_cmd.destination = dm_cmd.pose.pose;
 
-            if (dm_cmd.cmdCode == CmdCode::MOVE_TO_POINT)
+            if (dm_cmd.cmdCode == elikos_msgs::DMCmd::MOVE_TO_POINT)
             {
                 traj_cmd.trajectory = move_group_.move(dm_cmd.pose);
             }

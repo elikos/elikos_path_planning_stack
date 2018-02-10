@@ -26,8 +26,6 @@
 #include <elikos_msgs/TrajectoryCmd.h>
 #include <elikos_msgs/DMCmd.h>
 
-#include <CmdDefines.h>
-
 class Moveit_move_group
 {
 public:
