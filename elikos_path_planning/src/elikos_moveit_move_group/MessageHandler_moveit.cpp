@@ -10,13 +10,13 @@ MessageHandler_moveit::~MessageHandler_moveit()
 {
 }
 
-void MessageHandler_moveit::dispatchMessageTarget(const elikos_msgs::AICmd::ConstPtr &input)
+void MessageHandler_moveit::dispatchMessageTarget(const elikos_msgs::DMCmd::ConstPtr &input)
 {
   input_ = *(input);
   hasNewMessage_ = true;
 }
 
-elikos_msgs::AICmd MessageHandler_moveit::getAICmd()
+elikos_msgs::DMCmd MessageHandler_moveit::getDMCmd()
 {
   return input_;
 }

@@ -26,14 +26,14 @@ int main(int argc, char* argv[])
     {
         if(messageHandler.hasNewMessage())
         {
-            elikos_msgs::AICmd ai_cmd = messageHandler.getAICmd();
+            elikos_msgs::DMCmd dm_cmd = messageHandler.getDMCmd();
             elikos_msgs::TrajectoryCmd traj_cmd;
-            traj_cmd.cmdCode = ai_cmd.cmdCode;
-            traj_cmd.destination = ai_cmd.pose.pose;
+            traj_cmd.cmdCode = dm_cmd.cmdCode;
+            traj_cmd.destination = dm_cmd.pose.pose;
 
-            if (ai_cmd.cmdCode == CmdCode::MOVE_TO_POINT)
+            if (dm_cmd.cmdCode == CmdCode::MOVE_TO_POINT)
             {
-                traj_cmd.trajectory = move_group_.move(ai_cmd.pose);
+                traj_cmd.trajectory = move_group_.move(dm_cmd.pose);
             }
 
             pub.publish(traj_cmd);

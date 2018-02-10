@@ -24,7 +24,7 @@
 #include <ctime>
 
 #include <elikos_msgs/TrajectoryCmd.h>
-#include <elikos_msgs/AICmd.h>
+#include <elikos_msgs/DMCmd.h>
 
 #include <CmdDefines.h>
 
